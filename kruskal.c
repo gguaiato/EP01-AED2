@@ -6,10 +6,9 @@
 
 typedef struct auxVertice
 {
-
     int rank;
     int id;
-    struct AuxVertice *p;
+    struct auxVertice *p;
 } Vertice;
 
 typedef struct auxAresta {
@@ -178,7 +177,7 @@ Grafo* kruskal(Grafo* grafo) {
 
 int main(int argc, char *argv[]) {
     if ( argc != 3 ) {
-        printf("Voce deve fornecer um arquivo de entrada e um de saida\n", argc);
+        printf("Voce deve fornecer um arquivo de entrada e um de saida\n");
         return 0;
     }
     Grafo *grafo = leArq(argv[1]);
